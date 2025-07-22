@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | CourseFit</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="https://www.rrc.ca">
+        <img src="images/rrc-logo.png" alt="Red River College Polytechnic" class="rrc-logo">
+      </a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-it-works.html">How It Works</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Contact Our Team</h1>
+    
+    <form class="contact-form">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email"> Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <select id="subject" name="subject">
+          <option value="survey">Survey Questions</option>
+          <option value="technical">Technical Issues</option>
+          <option value="feedback">Feedback</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      
+      <button type="submit" class="rrc-btn">Send Message</button>
+    </form>
+    
+    <div class="contact-info">
+      <h2>Other Ways to Reach Us</h2>
+      <p>Email: <a href="mailto:coursefit@rrc.ca">coursefit@rrc.ca</a></p>
+      <p>Phone: 204-632-2327</p>
+      <p>Location: Academic Advising Office, Notre Dame Campus</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <img src="images/rrc-logo.png" alt="Red River College Polytechnic" width="150">
+    <p>&copy; 2025 Red River College Polytechnic</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

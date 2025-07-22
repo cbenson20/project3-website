@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CourseFit Survey | RRC</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Add only these new styles */
+    .survey-container { max-width: 800px; margin: 0 auto; padding: 20px; }
+    .survey-question { margin-bottom: 30px; padding: 20px; background: #f5f5f5; border-radius: 8px; }
+    .options { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
+    .options label { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+    .program-card { background: white; padding: 20px; margin: 15px 0; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    #results { display: none; margin-top: 30px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <!-- Your existing header code -->
+  </header>
+
+  <main class="survey-container">
+    <h1>CourseFit Program Survey</h1>
+    
+    <form id="courseSurvey">
+      <!-- Question 1 -->
+      <div class="survey-question">
+        <h2>1. What is your primary goal for attending RRC?</h2>
+        <div class="options">
+          <label><input type="radio" name="goal" value="career" required> Start a new career</label>
+          <label><input type="radio" name="goal" value="advancement"> Advance in current career</label>
+          <label><input type="radio" name="goal" value="skills"> Learn specific skills</label>
+        </div>
+      </div>
+      
+      <!-- Question 2 -->
+      <div class="survey-question">
+        <h2>2. Which field interests you most?</h2>
+        <div class="options">
+          <label><input type="radio" name="field" value="business" required> Business</label>
+          <label><input type="radio" name="field" value="technology"> Technology</label>
+          <label><input type="radio" name="field" value="health"> Health Sciences</label>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="survey-question">
+        <h2>3. Preferred learning style?</h2>
+        <div class="options">
+          <label><input type="radio" name="learning" value="hands-on" required> Hands-on practical</label>
+          <label><input type="radio" name="learning" value="lecture"> Classroom lectures</label>
+          <label><input type="radio" name="learning" value="online"> Online learning</label>
+        </div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="survey-question">
+        <h2>4. Ideal program length?</h2>
+        <div class="options">
+          <label><input type="radio" name="length" value="1year" required> 1 year</label>
+          <label><input type="radio" name="length" value="2year"> 2 years</label>
+          <label><input type="radio" name="length" value="flexible"> Flexible</label>
+        </div>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="survey-question">
+        <h2>5. Work environment preference?</h2>
+        <div class="options">
+          <label><input type="radio" name="environment" value="office" required> Office</label>
+          <label><input type="radio" name="environment" value="healthcare"> Healthcare</label>
+          <label><input type="radio" name="environment" value="outdoor"> Outdoor</label>
+        </div>
+      </div>
+
+      <!-- Question 6 -->
+      <div class="survey-question">
+        <h2>6. Which skills do you want to develop?</h2>
+        <div class="options">
+          <label><input type="checkbox" name="skills" value="technical"> Technical</label>
+          <label><input type="checkbox" name="skills" value="creative"> Creative</label>
+          <label><input type="checkbox" name="skills" value="communication"> Communication</label>
+        </div>
+      </div>
+
+      <!-- Question 7 -->
+      <div class="survey-question">
+        <h2>7. When can you study?</h2>
+        <div class="options">
+          <label><input type="radio" name="availability" value="fulltime" required> Full-time days</label>
+          <label><input type="radio" name="availability" value="evening"> Evenings</label>
+          <label><input type="radio" name="availability" value="weekend"> Weekends</label>
+        </div>
+      </div>
+
+      <!-- Question 8 -->
+      <div class="survey-question">
+        <h2>8. Salary expectations after graduation?</h2>
+        <div class="options">
+          <label><input type="radio" name="salary" value="40k" required> $40,000-$60,000</label>
+          <label><input type="radio" name="salary" value="60k"> $60,000-$80,000</label>
+          <label><input type="radio" name="salary" value="80k"> $80,000+</label>
+        </div>
+      </div>
+
+      <!-- Question 9 -->
+      <div class="survey-question">
+        <h2>9. Importance of co-op/work placement?</h2>
+        <div class="options">
+          <label><input type="radio" name="coop" value="essential" required> Very important</label>
+          <label><input type="radio" name="coop" value="preferred"> Preferred</label>
+          <label><input type="radio" name="coop" value="notimportant"> Not important</label>
+        </div>
+      </div>
+
+      <!-- Question 10 -->
+      <div class="survey-question">
+        <h2>10. How do you learn best?</h2>
+        <div class="options">
+          <label><input type="radio" name="learningstyle" value="visual" required> Visual (seeing)</label>
+          <label><input type="radio" name="learningstyle" value="auditory"> Auditory (hearing)</label>
+          <label><input type="radio" name="learningstyle" value="kinesthetic"> Hands-on (doing)</label>
+        </div>
+      </div>
+
+      <button type="submit" class="rrc-btn">Get Results</button>
+    </form>
+    
+    <div id="results">
+      <h2>Recommended Programs</h2>
+      <div id="programResults"></div>
+    </div>
+  </main>
+<div class="feedback">
+  <p>Having issues? <a href="contact.html">Contact us</a></p>
+</div>
+  <footer class="site-footer">
+    <!-- Your existing footer code -->
+  </footer>
+
+  <script src="js/survey.js"></script>
+</body>
+</html>
